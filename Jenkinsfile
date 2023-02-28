@@ -5,7 +5,7 @@ pipeline {
     environment {
     SVC_ACCOUNT_KEY = credentials('dev-auth')
   }
-
+ stages {
 		stage('Set Terraform path') {
             steps {
                 script {
@@ -44,4 +44,4 @@ pipeline {
 	}
                              
 }
-
+}
