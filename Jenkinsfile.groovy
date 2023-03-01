@@ -18,7 +18,7 @@ pipeline {
 	stage('Auth-Project') {
 	 steps {
 		 
-        sh 'gcloud auth activate-service-account jenkins@mi-dev-lab.iam.gserviceaccount.com --key-file=jenkins.json'
+        sh 'gcloud auth activate-service-account jenkins@mi-dev-env.iam.gserviceaccount.com --key-file=jenkins.json'
        sh 'gcloud config set project mi-dev-env'
 			 sh 'gcloud compute addresses list > addresses_ips.txt'
     }
